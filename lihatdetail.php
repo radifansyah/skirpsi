@@ -96,12 +96,12 @@ if (isset($_POST['submit'])) {
         <div><img src="admin/img/produk/<?php echo htmlentities($result->Vimage8); ?>" class="img-responsive" alt="image" width="900" height="560"></div>
         <div><img src="admin/img/produk/<?php echo htmlentities($result->Vimage9); ?>" class="img-responsive" alt="image" width="900" height="560"></div>
         <div><img src="admin/img/produk/<?php echo htmlentities($result->Vimage10); ?>" class="img-responsive" alt="image" width="900" height="560"></div>
-        <div><img src="admin/img/produk/<?php echo htmlentities($result->Vimage11); ?>" class="img-responsive" alt="image" width="900" height="560"></div>
+        <!-- <div><img src="admin/img/produk/<?php echo htmlentities($result->Vimage11); ?>" class="img-responsive" alt="image" width="900" height="560"></div>
         <div><img src="admin/img/produk/<?php echo htmlentities($result->Vimage12); ?>" class="img-responsive" alt="image" width="900" height="560"></div>
         <div><img src="admin/img/produk/<?php echo htmlentities($result->Vimage13); ?>" class="img-responsive" alt="image" width="900" height="560"></div>
         <div><img src="admin/img/produk/<?php echo htmlentities($result->Vimage14); ?>" class="img-responsive" alt="image" width="900" height="560"></div>
         <div><img src="admin/img/produk/<?php echo htmlentities($result->Vimage15); ?>" class="img-responsive" alt="image" width="900" height="560"></div>
-        <div><img src="admin/img/produk/<?php echo htmlentities($result->Vimage16); ?>" class="img-responsive" alt="image" width="900" height="560"></div>
+        <div><img src="admin/img/produk/<?php echo htmlentities($result->Vimage16); ?>" class="img-responsive" alt="image" width="900" height="560"></div> -->
 
         <!-- ?> -->
 

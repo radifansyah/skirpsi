@@ -254,7 +254,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 												Gambar 10 <img src="img/produk/<?php echo htmlentities($result->Vimage10); ?>" width="300" height="200" style="border:solid 1px #000">
 												<a href="changeimage10.php?imgid=<?php echo htmlentities($result->id) ?>">Ubah Gambar 10</a>
 											</div>
-											<div class="col-sm-4">
+											<!-- <div class="col-sm-4">
 												Gambar 11<img src="img/produk/<?php echo htmlentities($result->Vimage11); ?>" width="300" height="200" style="border:solid 1px #000">
 												<a href="changeimage11.php?imgid=<?php echo htmlentities($result->id) ?>">Ubah Gambar 11</a>
 											</div>
@@ -283,22 +283,22 @@ if (strlen($_SESSION['alogin']) == 0) {
 												Gambar 16 <img src="img/produk/<?php echo htmlentities($result->Vimage16); ?>" width="300" height="200" style="border:solid 1px #000">
 												<a href="changeimage16.php?imgid=<?php echo htmlentities($result->id) ?>">Ubah Gambar 16</a>
 											</div>
+										</div> -->
 										</div>
+										<div class="hr-dashed"></div>
 									</div>
-									<div class="hr-dashed"></div>
 								</div>
 							</div>
 						</div>
-					</div>
 
 
-					<div class="form-group">
-						<div class="col-sm-8 col-sm-offset-2">
+						<div class="form-group">
+							<div class="col-sm-8 col-sm-offset-2">
 
-							<button class="btn btn-primary" name="submit" type="submit" style="margin-top:4%">Save changes</button>
+								<button class="btn btn-primary" name="submit" type="submit" style="margin-top:4%">Save changes</button>
+							</div>
 						</div>
-					</div>
-					<!-- <div class="row">
+						<!-- <div class="row">
 								<div class="col-md-12">
 									<div class="panel panel-default">
 										<div class="panel-heading">Warna</div>
@@ -504,18 +504,18 @@ if (strlen($_SESSION['alogin']) == 0) {
 
 								</div>
 							</div> -->
-				</div>
+					</div>
 
-				<!-- Loading Scripts -->
-				<script src="js/jquery.min.js"></script>
-				<script src="js/bootstrap-select.min.js"></script>
-				<script src="js/bootstrap.min.js"></script>
-				<script src="js/jquery.dataTables.min.js"></script>
-				<script src="js/dataTables.bootstrap.min.js"></script>
-				<script src="js/Chart.min.js"></script>
-				<script src="js/fileinput.js"></script>
-				<script src="js/chartData.js"></script>
-				<script src="js/main.js"></script>
+					<!-- Loading Scripts -->
+					<script src="js/jquery.min.js"></script>
+					<script src="js/bootstrap-select.min.js"></script>
+					<script src="js/bootstrap.min.js"></script>
+					<script src="js/jquery.dataTables.min.js"></script>
+					<script src="js/dataTables.bootstrap.min.js"></script>
+					<script src="js/Chart.min.js"></script>
+					<script src="js/fileinput.js"></script>
+					<script src="js/chartData.js"></script>
+					<script src="js/main.js"></script>
 	</body>
 
 	</html>

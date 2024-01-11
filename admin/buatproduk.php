@@ -24,12 +24,12 @@ if (strlen($_SESSION['alogin']) == 0) {
 		$vimage8 = $_FILES["img8"]["name"];
 		$vimage9 = $_FILES["img9"]["name"];
 		$vimage10 = $_FILES["img10"]["name"];
-		$vimage11 = $_FILES["img11"]["name"];
-		$vimage12 = $_FILES["img12"]["name"];
-		$vimage13 = $_FILES["img13"]["name"];
-		$vimage14 = $_FILES["img14"]["name"];
-		$vimage15 = $_FILES["img15"]["name"];
-		$vimage16 = $_FILES["img16"]["name"];
+		// $vimage11 = $_FILES["img11"]["name"];
+		// $vimage12 = $_FILES["img12"]["name"];
+		// $vimage13 = $_FILES["img13"]["name"];
+		// $vimage14 = $_FILES["img14"]["name"];
+		// $vimage15 = $_FILES["img15"]["name"];
+		// $vimage16 = $_FILES["img16"]["name"];
 		move_uploaded_file($_FILES["img1"]["tmp_name"], "img/produk/" . $_FILES["img1"]["name"]);
 		move_uploaded_file($_FILES["img2"]["tmp_name"], "img/produk/" . $_FILES["img2"]["name"]);
 		move_uploaded_file($_FILES["img3"]["tmp_name"], "img/produk/" . $_FILES["img3"]["name"]);
@@ -41,13 +41,14 @@ if (strlen($_SESSION['alogin']) == 0) {
 		move_uploaded_file($_FILES["img9"]["tmp_name"], "img/produk/" . $_FILES["img9"]["name"]);
 		move_uploaded_file($_FILES["img10"]["tmp_name"], "img/produk/" . $_FILES["img10"]["name"]);
 		move_uploaded_file($_FILES["img11"]["tmp_name"], "img/produk/" . $_FILES["img11"]["name"]);
-		move_uploaded_file($_FILES["img12"]["tmp_name"], "img/produk/" . $_FILES["img12"]["name"]);
-		move_uploaded_file($_FILES["img13"]["tmp_name"], "img/produk/" . $_FILES["img13"]["name"]);
-		move_uploaded_file($_FILES["img14"]["tmp_name"], "img/produk/" . $_FILES["img14"]["name"]);
-		move_uploaded_file($_FILES["img15"]["tmp_name"], "img/produk/" . $_FILES["img15"]["name"]);
-		move_uploaded_file($_FILES["img16"]["tmp_name"], "img/produk/" . $_FILES["img16"]["name"]);
+		// move_uploaded_file($_FILES["img12"]["tmp_name"], "img/produk/" . $_FILES["img12"]["name"]);
+		// move_uploaded_file($_FILES["img13"]["tmp_name"], "img/produk/" . $_FILES["img13"]["name"]);
+		// move_uploaded_file($_FILES["img14"]["tmp_name"], "img/produk/" . $_FILES["img14"]["name"]);
+		// move_uploaded_file($_FILES["img15"]["tmp_name"], "img/produk/" . $_FILES["img15"]["name"]);
+		// move_uploaded_file($_FILES["img16"]["tmp_name"], "img/produk/" . $_FILES["img16"]["name"]);
 
-		$sql = "INSERT INTO tblproduk(Namaproduk,Kategori,Deskripsi,Harga,Penjualan,Vimage1,Vimage2,Vimage3,Vimage4,Vimage5,Vimage6,Vimage7,Vimage8,Vimage9,Vimage10,Vimage11,Vimage12,Vimage13,Vimage14,Vimage15,Vimage16) VALUES(:namaproduk,:kategori,:deskripsi,:harga,:penjualan,:vimage1,:vimage2,:vimage3,:vimage4,:vimage5,:vimage6,:vimage7,:vimage8,:vimage9,:vimage10,:vimage11,:vimage12,:vimage13,:vimage14,:vimage15,:vimage16)";
+		$sql = "INSERT INTO tblproduk(Namaproduk,Kategori,Deskripsi,Harga,Penjualan,Vimage1,Vimage2,Vimage3,Vimage4,Vimage5,Vimage6,Vimage7,Vimage8,Vimage9,Vimage10) VALUES(:namaproduk,:kategori,:deskripsi,:harga,:penjualan,:vimage1,:vimage2,:vimage3,:vimage4,:vimage5,:vimage6,:vimage7,:vimage8,:vimage9,:vimage10)";
+		// $sql = "INSERT INTO tblproduk(Namaproduk,Kategori,Deskripsi,Harga,Penjualan,Vimage1,Vimage2,Vimage3,Vimage4,Vimage5,Vimage6,Vimage7,Vimage8,Vimage9,Vimage10,Vimage11,Vimage12,Vimage13,Vimage14,Vimage15,Vimage16) VALUES(:namaproduk,:kategori,:deskripsi,:harga,:penjualan,:vimage1,:vimage2,:vimage3,:vimage4,:vimage5,:vimage6,:vimage7,:vimage8,:vimage9,:vimage10,:vimage11,:vimage12,:vimage13,:vimage14,:vimage15,:vimage16)";
 		$query = $dbh->prepare($sql);
 		$query->bindParam(':namaproduk', $namaproduk, PDO::PARAM_STR);
 		$query->bindParam(':kategori', $kategori, PDO::PARAM_STR);
@@ -66,12 +67,12 @@ if (strlen($_SESSION['alogin']) == 0) {
 		$query->bindParam(':vimage8', $vimage8, PDO::PARAM_STR);
 		$query->bindParam(':vimage9', $vimage9, PDO::PARAM_STR);
 		$query->bindParam(':vimage10', $vimage10, PDO::PARAM_STR);
-		$query->bindParam(':vimage11', $vimage11, PDO::PARAM_STR);
-		$query->bindParam(':vimage12', $vimage12, PDO::PARAM_STR);
-		$query->bindParam(':vimage13', $vimage13, PDO::PARAM_STR);
-		$query->bindParam(':vimage14', $vimage14, PDO::PARAM_STR);
-		$query->bindParam(':vimage15', $vimage15, PDO::PARAM_STR);
-		$query->bindParam(':vimage16', $vimage16, PDO::PARAM_STR);
+		// $query->bindParam(':vimage11', $vimage11, PDO::PARAM_STR);
+		// $query->bindParam(':vimage12', $vimage12, PDO::PARAM_STR);
+		// $query->bindParam(':vimage13', $vimage13, PDO::PARAM_STR);
+		// $query->bindParam(':vimage14', $vimage14, PDO::PARAM_STR);
+		// $query->bindParam(':vimage15', $vimage15, PDO::PARAM_STR);
+		// $query->bindParam(':vimage16', $vimage16, PDO::PARAM_STR);
 		$query->execute();
 		$lastInsertId = $dbh->lastInsertId();
 		if ($lastInsertId) {
@@ -269,7 +270,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 													<div class="col-sm-4">
 														Image 10<span style="color:red">*</span><input type="file" name="img10">
 													</div>
-													<div class="col-sm-4">
+													<!-- <div class="col-sm-4">
 														Image 11<span style="color:red">*</span><input type="file" name="img11">
 													</div>
 													<div class="col-sm-4">
@@ -291,31 +292,31 @@ if (strlen($_SESSION['alogin']) == 0) {
 													<div class="col-sm-4">
 														Image 16<span style="color:red">*</span><input type="file" name="img16">
 													</div>
-												</div>
+												</div> -->
 
+												</div>
+												<div class="hr-dashed"></div>
 										</div>
-										<div class="hr-dashed"></div>
 									</div>
 								</div>
 							</div>
-						</div>
 
 
-						<div class="form-group">
-							<div class="col-sm-8 col-sm-offset-2">
-								<button class="btn btn-default" type="reset">Cancel</button>
-								<button class="btn btn-primary" name="submit" type="submit">Save</button>
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<button class="btn btn-default" type="reset">Cancel</button>
+									<button class="btn btn-primary" name="submit" type="submit">Save</button>
+								</div>
 							</div>
+
+
+
+
+							</form>
 						</div>
-
-
-
-
-						</form>
 					</div>
 				</div>
 			</div>
-		</div>
 
 
 
