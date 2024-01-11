@@ -12,18 +12,18 @@ if (strlen($_SESSION['alogin']) == 0) {
 		$deskripsi = $_POST['deskrip'];
 		$harga = $_POST['harga'];
 		// $fueltype = $_POST['fueltype'];
-		$stok = $_POST['stok'];
+		$penjualan = $_POST['penjualan'];
 		$id = intval($_GET['id']);
 		// $id = $_GET['id'];
 
-		$sql = "update tblproduk set Namaproduk=:namaproduk,Kategori=:kategori,Deskripsi=:deskripsi,Harga=:harga,Stok=:stok where id=:id";
+		$sql = "update tblproduk set Namaproduk=:namaproduk,Kategori=:kategori,Deskripsi=:deskripsi,Harga=:harga,Penjualan=:penjualan where id=:id";
 		$query = $dbh->prepare($sql);
 		$query->bindParam(':namaproduk', $namaproduk, PDO::PARAM_STR);
 		$query->bindParam(':kategori', $kategori, PDO::PARAM_STR);
 		$query->bindParam(':deskripsi', $deskripsi, PDO::PARAM_STR);
 		$query->bindParam(':harga', $harga, PDO::PARAM_STR);
 		// $query->bindParam(':fueltype', $fueltype, PDO::PARAM_STR);
-		$query->bindParam(':stok', $stok, PDO::PARAM_STR);
+		$query->bindParam(':penjualan', $penjualan, PDO::PARAM_STR);
 		// $query->bindParam(':seatingcapacity', $seatingcapacity, PDO::PARAM_STR);
 		$query->bindParam(':id', $id, PDO::PARAM_STR);
 		$query->execute();
@@ -160,8 +160,8 @@ if (strlen($_SESSION['alogin']) == 0) {
 															<label class="col-sm-2 control-label">Penjualan<span style="color:red">*</span></label>
 															<div class="col-sm-4">
 																<div class="col-sm-4">
-																	<select class="selectpicker" name="stok" required>
-																		<option value="<?php echo htmlentities($result->Stok); ?>"> <?php echo htmlentities($result->Stok); ?></option>
+																	<select class="selectpicker" name="penjualan" required>
+																		<option value="<?php echo htmlentities($result->Penjualan); ?>"> <?php echo htmlentities($result->Penjualan); ?></option>
 																		<option value="Dijual">Dijual</option>
 																		<option value="Disewakan">Disewakan</option>
 																	</select>

@@ -56,7 +56,7 @@ error_reporting(0);
           <h1>Produk</h1>
         </div>
         <ul class="coustom-breadcrumb">
-          <li><a href="#">Home</a></li>
+          <li><a href="index.php">Home</a></li>
           <li>Produk</li>
         </ul>
       </div>
@@ -100,7 +100,7 @@ error_reporting(0);
                   <h5><a href="lihatdetail.php?vhid=<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->namaKategori); ?> , <?php echo htmlentities($result->Namaproduk); ?></a></h5>
                   <p class="list-price">Rp. <?php echo htmlentities($result->Harga); ?></p>
                   <ul>
-                    <li><i class="fa fa-calendar" aria-hidden="true"></i><?php echo htmlentities($result->Stok); ?> Stok</li>
+                    <li><i class="fa fa-calendar" aria-hidden="true"></i><?php echo htmlentities($result->Penjualan); ?></li>
                   </ul>
                   <a href="lihatdetail.php?vhid=<?php echo htmlentities($result->id); ?>" class="btn">Lihat Detail <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
                 </div>
@@ -168,7 +168,7 @@ error_reporting(0);
                     <li class="gray-bg">
                       <div class="recent_post_img"> <a href="lihatdetail.php?vhid=<?php echo htmlentities($result->id); ?>"><img src="admin/img/produk/<?php echo htmlentities($result->Vimage1); ?>" alt="image"></a> </div>
                       <div class="recent_post_title"> <a href="lihatdetail.php?vhid=<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->namaKategori); ?> , <?php echo htmlentities($result->Namaproduk); ?></a>
-                        <p class="widget_price">Rp. <?php echo htmlentities($result->Harga); ?> /Hari</p>
+                        <p class="widget_price">Rp. <?php echo htmlentities($result->Harga); ?> </p>
                       </div>
                     </li>
                 <?php }

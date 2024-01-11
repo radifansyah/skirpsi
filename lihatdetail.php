@@ -129,8 +129,7 @@ if (isset($_POST['submit'])) {
                 <ul>
 
                   <li> <i class="fa fa-calendar" aria-hidden="true"></i>
-                    <h5><?php echo htmlentities($result->Stok); ?></h5>
-                    <p>Stok</p>
+                    <h5><?php echo htmlentities($result->Penjualan); ?></h5>
                   </li>
                   <!-- <li> <i class="fa fa-cogs" aria-hidden="true"></i>
                     <h5><?php echo htmlentities($result->FuelType); ?></h5>
@@ -196,22 +195,23 @@ if (isset($_POST['submit'])) {
               </div>
               <div class="sidebar_widget">
                 <div class="widget_heading">
-                  <h5 style="font-size: 16px;"><i class="fa fa-envelope" aria-hidden="true"></i>Catat Pesanan/Pembelian</h5>
+                  <h5 style="font-size: 16px;"><i class="fa fa-envelope" aria-hidden="true"></i>Catat Penyewaan/Pembelian</h5>
                 </div>
                 <form method="post">
                   <div class="form-group">
-                    <label style="font-size: 12px; color: red;" for="">⚠️Jika Melakukan Pembelian Cukup Input
-                      Dari Tanggal, Dan Jika Melakukan Penyewaan Silahkan Memasukkan Dari Tanggal
-                      Dan Sampai Tanggal</label>
-                    <label style="font-size: 12px;" for="">Dari Tanggal (bulan/tanggal/tahun)</label>
+                    <label style="font-size: 12px; color: red;" for="">⚠️Jika Melakukan Pembelian Produk Hanya Memasukkan
+                      Tanggal Pembelian, Dan Jika Melakukan Penyewaan Produk Silahkan Memasukkan Tanggal
+                      Penyewaan
+                      Dan Tanggal Pengembalian</label>
+                    <label style="font-size: 12px;" for=""> Tanggal Pembelian/Penyewaan Produk</label>
                     <input type="date" class="form-control" name="daritanggal" placeholder="" required>
                   </div>
                   <div class="form-group">
-                    <label style="font-size: 13px;" for="">Sampai Tanggal (bulan/tanggal/tahun)</label>
+                    <label style="font-size: 13px;" for=""> Tanggal Pengembalian Produk</label>
                     <input type="date" class="form-control" name="sampaitanggal" placeholder="">
                   </div>
                   <div class="form-group">
-                    <textarea rows="4" class="form-control" name="pesan" placeholder="(Optional)"></textarea>
+                    <textarea rows="4" class="form-control" name="pesan" placeholder="Deskripsi(Optional)"></textarea>
                   </div>
                   <?php if ($_SESSION['login']) { ?>
                     <div class="form-group">

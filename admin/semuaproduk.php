@@ -111,7 +111,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 										</tfoot>
 										<tbody>
 
-											<?php $sql = "SELECT tblproduk.Namaproduk,tblkategori.namaKategori,tblproduk.Harga,tblproduk.Stok,tblproduk.id from tblproduk join tblkategori on tblkategori.id=tblproduk.Kategori";
+											<?php $sql = "SELECT tblproduk.Namaproduk,tblkategori.namaKategori,tblproduk.Harga,tblproduk.Penjualan,tblproduk.id from tblproduk join tblkategori on tblkategori.id=tblproduk.Kategori";
 											$query = $dbh->prepare($sql);
 											$query->execute();
 											$results = $query->fetchAll(PDO::FETCH_OBJ);
@@ -124,7 +124,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 														<td><?php echo htmlentities($result->namaKategori); ?></td>
 														<td><?php echo htmlentities($result->Harga); ?></td>
 														<!-- <td><?php echo htmlentities($result->FuelType); ?></td> -->
-														<td><?php echo htmlentities($result->Stok); ?></td>
+														<td><?php echo htmlentities($result->Penjualan); ?></td>
 														<td><a href="editproduk.php?id=<?php echo $result->id; ?>">Edit</a>&nbsp;&nbsp;/
 															<a href="semuaproduk.php?del=<?php echo $result->id; ?>" onclick="return confirm('Apakah Anda Ingin Hapus?');">Hapus</a>
 														</td>

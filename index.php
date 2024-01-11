@@ -87,7 +87,7 @@ error_reporting(0);
         <div class="tab-content">
           <div role="tabpanel" class="tab-pane active" id="resentnewcar">
 
-            <?php $sql = "SELECT tblproduk.Namaproduk,tblkategori.namaKategori,tblproduk.Harga,tblproduk.Stok,tblproduk.Deskripsi,tblproduk.id,tblproduk.Vimage1 from tblproduk join tblkategori on tblkategori.id=tblproduk.Kategori";
+            <?php $sql = "SELECT tblproduk.Namaproduk,tblkategori.namaKategori,tblproduk.Harga,tblproduk.Penjualan,tblproduk.Deskripsi,tblproduk.id,tblproduk.Vimage1 from tblproduk join tblkategori on tblkategori.id=tblproduk.Kategori";
             $query = $dbh->prepare($sql);
             $query->execute();
             $results = $query->fetchAll(PDO::FETCH_OBJ);
@@ -101,7 +101,7 @@ error_reporting(0);
                     <div class="car-info-box"> <a href="lihatdetail.php?vhid=<?php echo htmlentities($result->id); ?>"><img src="admin/img/produk/<?php echo htmlentities($result->Vimage1); ?>" class="img-responsive" alt="image"></a>
                       <ul>
                         <li><i class="fa fa-calendar" aria-hidden="true"></i>
-                          <div class="warna" style="display: inline; background-color: red; padding: 4px ;"><?php echo htmlentities($result->Stok); ?></div>
+                          <div class="warna" style="display: inline; background-color: red; padding: 4px ;"><?php echo htmlentities($result->Penjualan); ?></div>
                         </li>
                       </ul>
                     </div>

@@ -90,7 +90,7 @@ if (strlen($_SESSION['login']) == 0) {
             <h1>Tambah Testimoni</h1>
           </div>
           <ul class="coustom-breadcrumb">
-            <li><a href="#">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li>Tambah Testimoni</li>
           </ul>
         </div>

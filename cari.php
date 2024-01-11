@@ -107,7 +107,7 @@ error_reporting(0);
                   <h5><a href="lihatdetail.php?vhid=<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->namaKategori); ?> , <?php echo htmlentities($result->Namaproduk); ?></a></h5>
                   <p class="list-price">Rp. <?php echo htmlentities($result->Harga); ?></p>
                   <ul>
-                    <li><i class="fa fa-calendar" aria-hidden="true"></i><?php echo htmlentities($result->Stok); ?> Stok</li>
+                    <li><i class="fa fa-calendar" aria-hidden="true"></i><?php echo htmlentities($result->Penjualan); ?></li>
                   </ul>
                   <a href="lihatdetail.php?vhid=<?php echo htmlentities($result->id); ?>" class="btn">Lihat Detail <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
                 </div>

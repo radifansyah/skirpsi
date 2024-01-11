@@ -75,7 +75,7 @@ include('includes/config.php');
                     <h1>Faqs</h1>
                 </div>
                 <ul class="coustom-breadcrumb">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li>Faqs</li>
                 </ul>
             </div>
@@ -92,21 +92,23 @@ include('includes/config.php');
                 <div class="col-md-6">
                     <h5>Cara Daftar Akun</h5>
                     <ol type="1">
-                        <li>Facebook</a></li>
-                        <li>Whatshapp</a></li>
-                        <li>Instagram</a></li>
-                        <!-- <li><a href="#"><i class="fa fa-google-plus-square " aria-hidden="true"></i></a></li> -->
-                        <!-- <i class="fa-brands fa-tiktok fa-bounce"></i> -->
-                        <li>Tiktok</a></li>
+                        <li>Klik Tombol Login/Register</a></li>
+                        <li>Klik Daftar</a></li>
+                        <li>Kemudian Masukkan Nama Lengkap, No.Telpon, Email, dan Password</a></li>
                     </ol>
-                    <h5>Cara Pesan Produk</h5>
+                    <h5>Cara Melakukan Pembelian/Penyewaan Produk</h5>
                     <ol type="1">
-                        <li>Facebook</a></li>
-                        <li>Whatshapp</a></li>
-                        <li>Instagram</a></li>
+                        <li>Login Terlebih Dahulu Jika Belum Mempunyai Akun Silahkan Daftar </a></li>
+                        <li>Klik Menu Produk</a></li>
+                        <li>Pilih Produk Yang Inginkan</a></li>
                         <!-- <li><a href="#"><i class="fa fa-google-plus-square " aria-hidden="true"></i></a></li> -->
                         <!-- <i class="fa-brands fa-tiktok fa-bounce"></i> -->
-                        <li>Tiktok</a></li>
+                        <li>
+                            Klik Tombol Lihat Detail</a></li>
+                        <li>Jika Melakukan Pembelian Produk Hanya Memasukkan Tanggal Pembelian, Dan Jika Melakukan Penyewaan Produk Silahkan Memasukkan Tanggal Penyewaan Dan Tanggal Pengembalian</li>
+                        <li>Klik Tombol Pesan Sekarang</li>
+                        <li>Klik Nama Anda Di Bagian Menu Untuk Melihat Pesanan Anda Apakah Di Konfirmasi Atau Belum Dan Silahkan Klik Menu Tambah Testimoni Untuk Memberikan Ulasan Tentang Toko Azha Seserahan Palopo
+                        </li>
                     </ol>
 
 

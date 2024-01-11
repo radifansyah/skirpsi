@@ -66,7 +66,7 @@ if (strlen($_SESSION['login']) == 0) {
             <h1>Pesanan Saya</h1>
           </div>
           <ul class="coustom-breadcrumb">
-            <li><a href="#">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li>Pesanan Saya</li>
           </ul>
         </div>
@@ -121,9 +121,9 @@ if (strlen($_SESSION['login']) == 0) {
                           foreach ($results as $result) {  ?>
 
                             <li>
-                              <div class="vehicle_img"> <a href="vehical-details.php?vhid=<?php echo htmlentities($result->vid); ?>""><img src=" admin/img/produk/<?php echo htmlentities($result->Vimage1); ?>" alt="image"></a> </div>
+                              <div class="vehicle_img"> <a href="lihatdetail.php?vhid=<?php echo htmlentities($result->vid); ?>""><img src=" admin/img/produk/<?php echo htmlentities($result->Vimage1); ?>" alt="image"></a> </div>
                               <div class="vehicle_title">
-                                <h6><a href="vehical-details.php?vhid=<?php echo htmlentities($result->vid); ?>""> <?php echo htmlentities($result->namaKategori); ?> , <?php echo htmlentities($result->Namaproduk); ?></a></h6>
+                                <h6><a href="lihatdetail.php?vhid=<?php echo htmlentities($result->vid); ?>""> <?php echo htmlentities($result->namaKategori); ?> , <?php echo htmlentities($result->Namaproduk); ?></a></h6>
                   <p><b>Dari Tanggal:</b> <?php echo htmlentities($result->Daritanggal); ?><br /> <b>Sampai Tanggal:</b> <?php echo htmlentities($result->Sampaitanggal); ?></p>
                 </div>
                 <?php if ($result->Status == 1) { ?>

@@ -54,7 +54,7 @@ if (isset($_POST['login'])) {
       </div>
       <div class="modal-footer text-center">
         <p>Belum memiliki akun? <a href="#signupform" data-toggle="modal" data-dismiss="modal">Daftar</a></p>
-        <p><a href="#forgotpassword" data-toggle="modal" data-dismiss="modal">Lupa Password ?</a></p>
+        <!-- <p><a href="#forgotpassword" data-toggle="modal" data-dismiss="modal">Lupa Password ?</a></p> -->
       </div>
     </div>
   </div>

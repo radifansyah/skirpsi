@@ -16,7 +16,7 @@ if (isset($_POST['send'])) {
   $query->execute();
   $lastInsertId = $dbh->lastInsertId();
   if ($lastInsertId) {
-    $msg = "Pertanyaan Anda Telah terkirim";
+    $msg = "Pesan Anda Telah terkirim";
   } else {
     $error = "Terjadi Kesalahan. Silahkan Coba Lagi";
   }
@@ -94,7 +94,7 @@ if (isset($_POST['send'])) {
           <h1>Hubungi Kami</h1>
         </div>
         <ul class="coustom-breadcrumb">
-          <li><a href="#">Home</a></li>
+          <li><a href="index.php">Home</a></li>
           <li>Hubungi Kami</li>
         </ul>
       </div>
