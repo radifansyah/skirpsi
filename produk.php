@@ -49,7 +49,7 @@ error_reporting(0);
   <!-- /Header -->
 
   <!--Page Header-->
-  <section class="page-header listing_page" style="background-image: url(assets/images/a.jpg);">
+  <section class="page-header listing_page" style="background-image: url(assets/images/b.jpeg);">
     <div class="container">
       <div class="page-header_wrap">
         <div class="page-heading">

@@ -68,7 +68,7 @@ include('includes/config.php');
     <!-- /Header -->
 
     <!--Page Header-->
-    <section class="page-header contactus_page" style="background-image: url(assets/images/a.jpg);">
+    <section class="page-header contactus_page" style="background-image: url(assets/images/b.jpeg);">
         <div class="container">
             <div class="page-header_wrap">
                 <div class="page-heading">

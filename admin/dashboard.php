@@ -66,7 +66,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 														$totalproduk = $query1->rowCount();
 														?>
 														<div class="stat-panel-number h1 "><?php echo htmlentities($totalproduk); ?></div>
-														<div class="stat-panel-title text-uppercase">Produk</div>
+														<div class="stat-panel-title ">Semua Produk</div>
 													</div>
 												</div>
 												<a href="semuaproduk.php" class="block-anchor panel-footer text-center">Lihat Detail &nbsp; <i class="fa fa-arrow-right"></i></a>
@@ -85,7 +85,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 														?>
 
 														<div class="stat-panel-number h1 "><?php echo htmlentities($bookings); ?></div>
-														<div class="stat-panel-title text-uppercase">Total Order</div>
+														<div class="stat-panel-title ">Total Order</div>
 													</div>
 												</div>
 												<a href="booking.php" class="block-anchor panel-footer text-center">Lihat Detail &nbsp; <i class="fa fa-arrow-right"></i></a>
@@ -103,7 +103,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 														$brands = $query3->rowCount();
 														?>
 														<div class="stat-panel-number h1 "><?php echo htmlentities($brands); ?></div>
-														<div class="stat-panel-title text-uppercase">Kategori</div>
+														<div class="stat-panel-title ">Semua Kategori</div>
 													</div>
 												</div>
 												<a href="semuaproduk.php" class="block-anchor panel-footer text-center">Lihat Detail &nbsp; <i class="fa fa-arrow-right"></i></a>
@@ -136,7 +136,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 														$query = $query6->rowCount();
 														?>
 														<div class="stat-panel-number h1 "><?php echo htmlentities($query); ?></div>
-														<div class="stat-panel-title text-uppercase">Hubungi Kami</div>
+														<div class="stat-panel-title ">Hubungi Kami</div>
 													</div>
 												</div>
 												<a href="hubungikami.php" class="block-anchor panel-footer text-center">Lihat Detail &nbsp; <i class="fa fa-arrow-right"></i></a>
@@ -155,7 +155,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 														?>
 
 														<div class="stat-panel-number h1 "><?php echo htmlentities($testimonials); ?></div>
-														<div class="stat-panel-title text-uppercase">Testimoni User</div>
+														<div class="stat-panel-title ">Testimoni Pelanggan</div>
 													</div>
 												</div>
 												<a href="testimonials.php" class="block-anchor panel-footer text-center">Lihat Detail &nbsp; <i class="fa fa-arrow-right"></i></a>
@@ -173,7 +173,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 														$regusers = $query->rowCount();
 														?>
 														<div class="stat-panel-number h1 "><?php echo htmlentities($regusers); ?></div>
-														<div class="stat-panel-title text-uppercase">User</div>
+														<div class="stat-panel-title ">User</div>
 													</div>
 												</div>
 												<a href="reg-users.php" class="block-anchor panel-footer">Lihat Detail <i class="fa fa-arrow-right"></i></a>

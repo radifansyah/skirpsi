@@ -168,7 +168,7 @@ error_reporting(0);
 
 
   <!--Testimonial -->
-  <section class="section-padding testimonial-section parallex-bg" style="background-image: url(assets/images/a.jpg);">
+  <section class="section-padding testimonial-section parallex-bg" style="background-image: url(assets/images/b.jpeg);">
     <div class="container div_zindex">
       <div class="section-header white-text text-center">
         <h2>Kami Puas <span> Review Pelanggan</span></h2>
@@ -188,7 +188,7 @@ error_reporting(0);
 
 
               <div class="testimonial-m">
-                <div class="testimonial-img"> <img src="assets/images/cat-profile.png" alt="" /> </div>
+                <div class="testimonial-img"> <img src="assets/images/review.png" alt="" /> </div>
                 <div class="testimonial-content">
                   <div class="testimonial-heading">
                     <h5><?php echo htmlentities($result->Namalengkap); ?></h5>

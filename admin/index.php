@@ -43,12 +43,12 @@ if (isset($_POST['login'])) {
 
 <body>
 
-	<div class="login-page bk-img" style="background-image: url(../admin/img/a.jpg);">
+	<div class="login-page bk-img" style="background-image: url(../admin/img/b.jpeg);">
 		<div class="form-content">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3">
-						<h1 class="text-center text-bold text-light mt-4x">ADMIN LOGIN</h1>
+						<h1 class="text-center text-bold mt-4x">ADMIN LOGIN</h1>
 						<div class="well row pt-2x pb-3x bk-light">
 							<div class="col-md-8 col-md-offset-2">
 								<form method="post">

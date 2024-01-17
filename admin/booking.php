@@ -109,11 +109,10 @@ if (strlen($_SESSION['alogin']) == 0) {
 					<div class="row">
 						<div class="col-md-12">
 
-							<h2 class="page-title">Semua Order</h2>
+							<h2>Semua Order</h2>
 
 							<!-- Zero Configuration Table -->
 							<div class="panel panel-default">
-								<div class="panel-heading"></div>
 								<div class="panel-body">
 									<?php if ($error) { ?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } else if ($msg) { ?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php } ?>
 									<table id="zctb" class="display table table-striped table-bordered table-hover" cellspacing="0" width="100%">
@@ -130,19 +129,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 												<th>Aksi</th>
 											</tr>
 										</thead>
-										<tfoot>
-											<tr>
-												<th>No</th>
-												<th>Nama User</th>
-												<th>Kategori/Produk</th>
-												<th>Dari Tanggal</th>
-												<th>Sampai Tanggal</th>
-												<th>Pesan</th>
-												<th>Status</th>
-												<th>Tanggal di Kirim</th>
-												<th>Aksi</th>
-											</tr>
-										</tfoot>
+
 										<tbody>
 
 											<?php $sql = "SELECT tbluser.Namalengkap,tblkategori.namaKategori,tblproduk.Namaproduk,tblbooking.Daritanggal,tblbooking.Sampaitanggal,tblbooking.Pesan,tblbooking.Barang,tblbooking.Status,tblbooking.Tanggalkirim,tblbooking.id  from tblbooking join tblproduk on tblproduk.id=tblbooking.Barang join tbluser on tbluser.Email=tblbooking.Emailid join tblkategori on tblproduk.Kategori=tblkategori.id  ";
@@ -174,11 +161,11 @@ if (strlen($_SESSION['alogin']) == 0) {
 															}
 															?></td>
 														<td><?php echo htmlentities($result->Tanggalkirim); ?></td>
-														<td><a href="booking.php?aeid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Apakah Anda yakin ingin mengkonfirmasi pemesanan ini ?')"> Confirm</a> /
+														<td><a class="btn-primary" href="booking.php?aeid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Apakah Anda yakin ingin mengkonfirmasi pemesanan ini ?')"> Confirm</a>
 
 
-															<a href="booking.php?eid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Apakah Anda yakin ingin Membatalkan Pemesanan ini ?')"> Cancel</a>
-															<a href="booking.php?del=<?php echo $result->id; ?>" onclick="return confirm('Apakah Anda ingin menghapus');"> / Delete</a>
+															<a class="btn-primary" href="booking.php?eid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Apakah Anda yakin ingin Membatalkan Pemesanan ini ?')"> Batal</a>
+															<a class="btn-primary" href="booking.php?del=<?php echo $result->id; ?>" onclick="return confirm('Apakah Anda ingin menghapus');">Hapus</a>
 
 
 														</td>

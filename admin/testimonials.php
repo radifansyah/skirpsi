@@ -106,11 +106,10 @@ if (strlen($_SESSION['alogin']) == 0) {
 					<div class="row">
 						<div class="col-md-12">
 
-							<h2 class="page-title">Testimoni User</h2>
+							<h2>Testimoni Pelanggan</h2>
 
 							<!-- Zero Configuration Table -->
 							<div class="panel panel-default">
-								<div class="panel-heading"></div>
 								<div class="panel-body">
 									<?php if ($error) { ?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } else if ($msg) { ?><div class="succWrap"><strong></strong><?php echo htmlentities($msg); ?> </div><?php } ?>
 									<table id="zctb" class="display table table-striped table-bordered table-hover" cellspacing="0" width="100%">
@@ -124,16 +123,6 @@ if (strlen($_SESSION['alogin']) == 0) {
 												<th>Aksi</th>
 											</tr>
 										</thead>
-										<tfoot>
-											<tr>
-												<th>No</th>
-												<th>Nama </th>
-												<th>Email </th>
-												<th>Testimoni</th>
-												<th>Tanggal di Kirim</th>
-												<th>Aksi</th>
-											</tr>
-										</tfoot>
 										<tbody>
 
 											<?php $sql = "SELECT tbluser.Namalengkap,tbltestimonial.Email,tbltestimonial.Testimoni,tbltestimonial.Tanggalkirim,tbltestimonial.Status,tbltestimonial.id from tbltestimonial join tbluser on tbluser.Email=tbltestimonial.Email";
@@ -152,11 +141,11 @@ if (strlen($_SESSION['alogin']) == 0) {
 														<td><?php echo htmlentities($result->Testimoni); ?></td>
 														<td><?php echo htmlentities($result->Tanggalkirim); ?></td>
 														<td><?php if ($result->Status == "" || $result->Status == 0) {
-															?><a href="testimonials.php?aeid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Do you really want to Active')"> Inactive<a href="testimonials.php?del=<?php echo $result->id; ?>" onclick="return confirm('Do you want to delete');"></i> / Delete</a></a>
+															?><a class="btn-primary" href="testimonials.php?aeid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Do you really want to Active')"> Inactive<br><a class="btn-primary" href="testimonials.php?del=<?php echo $result->id; ?>" onclick="return confirm('Do you want to delete');"></i>Hapus</a></a>
 															<?php } else { ?>
 
-																<a href="testimonials.php?eid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Do you really want to Inactive')"> Active</a>
-																<a href="testimonials.php?del=<?php echo $result->id; ?>" onclick="return confirm('Do you want to delete');"></i> / Delete</a>
+																<a class="btn-primary" href="testimonials.php?eid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Do you really want to Inactive')"> Active</a>
+																<a class="btn-primary" href="testimonials.php?del=<?php echo $result->id; ?>" onclick="return confirm('Do you want to delete');"></i>Hapus</a>
 														</td>
 
 													<?php } ?></td>

@@ -80,35 +80,35 @@ if (strlen($_SESSION['alogin']) == 0) {
 					<div class="row">
 						<div class="col-md-12">
 
-							<h2 class="page-title">Semua Produk</h2>
+							<h2>Semua Produk</h2>
 
 							<!-- Zero Configuration Table -->
 							<div class="panel panel-default">
-								<div class="panel-heading"></div>
+								<!-- <div class="panel-heading"></div> -->
 								<div class="panel-body">
 									<?php if ($error) { ?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } else if ($msg) { ?><div class="succWrap"><strong></strong><?php echo htmlentities($msg); ?> </div><?php } ?>
 									<table id="zctb" class="display table table-striped table-bordered table-hover" cellspacing="0" width="100%">
 										<thead>
 											<tr>
 												<th>No</th>
-												<th>Produk</th>
 												<th>Kategori</th>
+												<th>Produk</th>
 												<th>Harga</th>
-												<th>Stok</th>
+												<th>Penjualan</th>
 												<th>Aksi</th>
 											</tr>
 										</thead>
-										<tfoot>
+										<!-- <tfoot>
 											<tr>
 												<th>No</th>
-												<th>Produk</th>
 												<th>Kategori</th>
+												<th>Produk</th>
 												<th>Harga</th>
 												<th>Stok</th>
 												<th>Aksi</th>
 											</tr>
 											</tr>
-										</tfoot>
+										</tfoot> -->
 										<tbody>
 
 											<?php $sql = "SELECT tblproduk.Namaproduk,tblkategori.namaKategori,tblproduk.Harga,tblproduk.Penjualan,tblproduk.id from tblproduk join tblkategori on tblkategori.id=tblproduk.Kategori";
@@ -120,13 +120,13 @@ if (strlen($_SESSION['alogin']) == 0) {
 												foreach ($results as $result) {				?>
 													<tr>
 														<td><?php echo htmlentities($cnt); ?></td>
-														<td><?php echo htmlentities($result->Namaproduk); ?></td>
 														<td><?php echo htmlentities($result->namaKategori); ?></td>
+														<td><?php echo htmlentities($result->Namaproduk); ?></td>
 														<td><?php echo htmlentities($result->Harga); ?></td>
 														<!-- <td><?php echo htmlentities($result->FuelType); ?></td> -->
 														<td><?php echo htmlentities($result->Penjualan); ?></td>
-														<td><a href="editproduk.php?id=<?php echo $result->id; ?>">Edit</a>&nbsp;&nbsp;/
-															<a href="semuaproduk.php?del=<?php echo $result->id; ?>" onclick="return confirm('Apakah Anda Ingin Hapus?');">Hapus</a>
+														<td><a class=" btn-primary" href="editproduk.php?id=<?php echo $result->id; ?>">Edit</a>&nbsp;&nbsp;
+															<a class=" btn-primary" href="semuaproduk.php?del=<?php echo $result->id; ?>" onclick="return confirm('Apakah Anda Ingin Hapus?');">Hapus</a>
 														</td>
 													</tr>
 											<?php $cnt = $cnt + 1;

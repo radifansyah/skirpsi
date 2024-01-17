@@ -80,11 +80,11 @@ if (strlen($_SESSION['alogin']) == 0) {
 					<div class="row">
 						<div class="col-md-12">
 
-							<h2 class="page-title">Semua Kategori</h2>
+							<h2>Semua Kategori</h2>
 
 							<!-- Zero Configuration Table -->
 							<div class="panel panel-default">
-								<div class="panel-heading"></div>
+								<!-- <div class="panel-heading"></div> -->
 								<div class="panel-body">
 									<?php if ($error) { ?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } else if ($msg) { ?><div class="succWrap"><strong></strong><?php echo htmlentities($msg); ?> </div><?php } ?>
 									<table id="zctb" class="display table table-striped table-bordered table-hover" cellspacing="0" width="100%">
@@ -93,12 +93,12 @@ if (strlen($_SESSION['alogin']) == 0) {
 												<th>No</th>
 												<th>Nama</th>
 												<th>Tanggal di Buat</th>
-												<th>Tanggal di Update</th>
+												<th>Tanggal di Ubah</th>
 
 												<th>Aksi</th>
 											</tr>
 										</thead>
-										<tfoot>
+										<!-- <tfoot>
 											<tr>
 												<th>No</th>
 												<th>Nama</th>
@@ -108,7 +108,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 												<th>Aksi</th>
 											</tr>
 											</tr>
-										</tfoot>
+										</tfoot> -->
 										<tbody>
 
 											<?php $sql = "SELECT * from  tblkategori ";
@@ -123,8 +123,8 @@ if (strlen($_SESSION['alogin']) == 0) {
 														<td><?php echo htmlentities($result->namaKategori); ?></td>
 														<td><?php echo htmlentities($result->tanggalBuat); ?></td>
 														<td><?php echo htmlentities($result->tanggalUpdate); ?></td>
-														<td><a href="editkategori.php?id=<?php echo $result->id; ?>">Edit</a>&nbsp;&nbsp;/
-															<a href="semuakategori.php?del=<?php echo $result->id; ?>" onclick="return confirm('Apakah Anda Yakin Ingin Hapus Data ?');">Delete</a>
+														<td><a class="btn-primary" href="editkategori.php?id=<?php echo $result->id; ?>">Edit</a>&nbsp;&nbsp;
+															<a class="btn-primary" href="semuakategori.php?del=<?php echo $result->id; ?>" onclick="return confirm('Apakah Anda Yakin Ingin Hapus Data ?');">Delete</a>
 														</td>
 													</tr>
 											<?php $cnt = $cnt + 1;

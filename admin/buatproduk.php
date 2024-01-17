@@ -145,12 +145,12 @@ if (strlen($_SESSION['alogin']) == 0) {
 					<div class="row">
 						<div class="col-md-12">
 
-							<h2 class="page-title">Buat Produk</h2>
+							<h2>Buat Produk</h2>
 
 							<div class="row">
 								<div class="col-md-12">
 									<div class="panel panel-default">
-										<div class="panel-heading"></div>
+										<!-- <div class="panel-heading"></div> -->
 										<?php if ($error) { ?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } else if ($msg) { ?><div class="succWrap"><strong></strong><?php echo htmlentities($msg); ?> </div><?php } ?>
 
 										<div class="panel-body">
@@ -304,8 +304,8 @@ if (strlen($_SESSION['alogin']) == 0) {
 
 							<div class="form-group">
 								<div class="col-sm-8 col-sm-offset-2">
-									<button class="btn btn-default" type="reset">Cancel</button>
-									<button class="btn btn-primary" name="submit" type="submit">Save</button>
+									<button class="btn btn-default" type="reset">Batal</button>
+									<button class="btn btn-primary" name="submit" type="submit">Simpan</button>
 								</div>
 							</div>
 
