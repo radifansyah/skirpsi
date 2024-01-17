@@ -157,7 +157,7 @@ error_reporting(0);
             </div>
             <div class="recent_addedcars">
               <ul>
-                <?php $sql = "SELECT tblproduk.*,tblkategori.namaKategori,tblkategori.id as bid  from tblproduk join tblkategori on tblkategori.id=tblproduk.Kategori order by id desc limit 4";
+                <?php $sql = "SELECT tblproduk.*,tblkategori.namaKategori,tblkategori.id as bid  from tblproduk join tblkategori on tblkategori.id=tblproduk.Kategori order by id desc limit 100";
                 $query = $dbh->prepare($sql);
                 $query->execute();
                 $results = $query->fetchAll(PDO::FETCH_OBJ);
