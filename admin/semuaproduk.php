@@ -91,8 +91,8 @@ if (strlen($_SESSION['alogin']) == 0) {
 										<thead>
 											<tr>
 												<th>No</th>
-												<th>Kategori</th>
-												<th>Produk</th>
+												<th>Nama Kategori</th>
+												<th>Nama Produk</th>
 												<th>Harga</th>
 												<th>Penjualan</th>
 												<th>Aksi</th>
@@ -126,7 +126,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 														<!-- <td><?php echo htmlentities($result->FuelType); ?></td> -->
 														<td><?php echo htmlentities($result->Penjualan); ?></td>
 														<td><a class=" btn-primary" href="editproduk.php?id=<?php echo $result->id; ?>">Edit</a>&nbsp;&nbsp;
-															<a class=" btn-primary" href="semuaproduk.php?del=<?php echo $result->id; ?>" onclick="return confirm('Apakah Anda Ingin Hapus?');">Hapus</a>
+															<a class=" btn-primary" href="semuaproduk.php?del=<?php echo $result->id; ?>" onclick="return confirm('Apakah Anda Ingin Delete?');">Delete</a>
 														</td>
 													</tr>
 											<?php $cnt = $cnt + 1;

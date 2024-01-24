@@ -184,7 +184,7 @@ if (strlen($_SESSION['login']) == 0) {
           <!--Slider-JS-->
           <script src="assets/js/slick.min.js"></script>
           <script src="assets/js/owl.carousel.min.js"></script>
-
+          <script src="https://kit.fontawesome.com/59dcbb9722.js" crossorigin="anonymous"></script>
   </body>
 
   </html>

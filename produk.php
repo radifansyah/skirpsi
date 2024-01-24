@@ -152,7 +152,7 @@ error_reporting(0);
 
           <div class="sidebar_widget">
             <div class="widget_heading">
-              <h5></i> Semua Produk</h5>
+              <h5></i>Kategori/Produk Tersedia</h5>
 
             </div>
             <div class="recent_addedcars">

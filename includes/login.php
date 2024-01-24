@@ -10,7 +10,7 @@ if (isset($_POST['login'])) {
   $results = $query->fetchAll(PDO::FETCH_OBJ);
   if ($query->rowCount() > 0) {
     $_SESSION['login'] = $_POST['email'];
-    $_SESSION['fnama'] = $results->Namalengkap;
+    $_SESSION['fname'] = $results->Namalengkap;
     $currentpage = $_SERVER['REQUEST_URI'];
     echo "<script type='text/javascript'> document.location = '$currentpage'; </script>";
   } else {
@@ -34,10 +34,10 @@ if (isset($_POST['login'])) {
             <div class="col-md-12 col-sm-6">
               <form method="post">
                 <div class="form-group">
-                  <input type="email" class="form-control" name="email" placeholder="Masukkan Email Anda.....">
+                  <input type="email" class="form-control" name="email" placeholder="Masukkan Email ">
                 </div>
                 <div class="form-group">
-                  <input type="password" class="form-control" name="password" placeholder="Masukkan Password Anda.....">
+                  <input type="password" class="form-control" name="password" placeholder="Masukkan Password ">
                 </div>
                 <div class="form-group checkbox">
                   <input type="checkbox" id="remember">

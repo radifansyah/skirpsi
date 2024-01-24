@@ -2,10 +2,10 @@
   <div class="default-header">
     <div class="container">
       <div class="row">
-        <div class="col-sm-3 col-md-2 ">
-          <h4 class="judul" style="margin-top: 10px;">Azha Seserahan</h4>
+        <div class="col-sm-3 col-md-3 ">
+          <h4 class="judul" style="margin-top: 10px;">Azha Seserahan Palopo</h4>
         </div>
-        <div class="col-sm-9 col-md-10">
+        <div class="col-sm-9 col-md-9">
           <div class="header_info">
             <div class="header_widgets">
               <div class="circle_icon"> <i class="fa fa-envelope" aria-hidden="true"></i> </div>
@@ -29,7 +29,7 @@
             </div>
             <?php if (strlen($_SESSION['login']) == 0) {
             ?>
-              <div class="login_btn"> <a href="#loginform" class="btn btn-xs uppercase" data-toggle="modal" data-dismiss="modal">Login / Register</a> </div>
+              <div class="login_btn"> <a href="#loginform" class="btn btn-xs uppercase" data-toggle="modal" data-dismiss="modal">Login / Daftar</a> </div>
             <?php } else {
 
               echo "Anda Berhasil Login";
@@ -72,6 +72,7 @@
                   <!-- <li><a href="my-testimonials.php">My Testimonial</a></li> -->
                   <li><a href="logout.php">Logout</a></li>
                 <?php } else { ?>
+                  <li>Silahkan Login Terlebih Dahulu</li>
                   <!-- <li><a href="#loginform" data-toggle="modal" data-dismiss="modal">Profile Settings</a></li> -->
                   <!-- <li><a href="#loginform" data-toggle="modal" data-dismiss="modal">Update Password</a></li> -->
                   <!-- <li><a href="#loginform" data-toggle="modal" data-dismiss="modal">Pesanan Saya</a></li> -->
@@ -97,9 +98,9 @@
 
           <!-- <li><a href="page.php?type=aboutus">Tentang Toko</a></li> -->
           <li><a href="tentang-toko.php">Tentang Toko</a></li>
+          <li><a href="faqs.php">Faqs</a></li>
           <li><a href="produk.php">Produk</a>
             <!-- <li><a href="page.php?type=faqs">Faqs</a></li> -->
-          <li><a href="faqs.php">Faqs</a></li>
           <li><a href="hubungikami.php">Hubungi Kami</a></li>
 
         </ul>

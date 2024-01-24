@@ -145,7 +145,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 															<?php } else { ?>
 
 																<a class="btn-primary" href="testimonials.php?eid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Do you really want to Inactive')"> Active</a>
-																<a class="btn-primary" href="testimonials.php?del=<?php echo $result->id; ?>" onclick="return confirm('Do you want to delete');"></i>Hapus</a>
+																<a class="btn-primary" href="testimonials.php?del=<?php echo $result->id; ?>" onclick="return confirm('Do you want to delete');"></i>Delete</a>
 														</td>
 
 													<?php } ?></td>

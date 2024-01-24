@@ -164,8 +164,8 @@ if (strlen($_SESSION['alogin']) == 0) {
 														<td><a class="btn-primary" href="booking.php?aeid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Apakah Anda yakin ingin mengkonfirmasi pemesanan ini ?')"> Confirm</a>
 
 
-															<a class="btn-primary" href="booking.php?eid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Apakah Anda yakin ingin Membatalkan Pemesanan ini ?')"> Batal</a>
-															<a class="btn-primary" href="booking.php?del=<?php echo $result->id; ?>" onclick="return confirm('Apakah Anda ingin menghapus');">Hapus</a>
+															<a class="btn-primary" href="booking.php?eid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Apakah Anda yakin ingin Membatalkan Pemesanan ini ?')"> Cancel</a>
+															<a class="btn-primary" href="booking.php?del=<?php echo $result->id; ?>" onclick="return confirm('Apakah Anda ingin menghapus');">Delete</a>
 
 
 														</td>

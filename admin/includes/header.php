@@ -6,7 +6,7 @@
 	<ul class="ts-profile-nav">
 
 		<li class="ts-account">
-			<a href="#">Admin<i class="fa fa-angle-down hidden-side"></i></a>
+			<a href="#">Account<i class="fa fa-angle-down hidden-side"></i></a>
 			<ul>
 				<li><a href="ubahpassword.php">Ubah Password</a></li>
 				<li><a href="logout.php">Logout</a></li>

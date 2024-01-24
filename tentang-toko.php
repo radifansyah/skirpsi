@@ -121,7 +121,7 @@ include('includes/config.php');
                         } ?>
                     </div> -->
                     <!-- <div class="social-follow"> -->
-                    <h5>TOKO AZHA SESERAHAN PALOPO</h5>
+                    <h5>Toko Azha Seserahan Palopo</h5>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi amet nemo doloribus nam, enim, vero vitae dolore commodi nostrum doloremque nesciunt minus! Harum quas quibusdam facilis possimus incidunt aliquam quis molestiae est officia nulla consequatur pariatur qui voluptate cumque dolorem quisquam quae totam, iusto architecto iure ipsam ad? Ab, nihil.</p>
                     <h5>Media Sosial</h5>
                     <ul>
@@ -143,7 +143,6 @@ include('includes/config.php');
                         </form>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>

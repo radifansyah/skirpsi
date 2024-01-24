@@ -90,13 +90,13 @@ include('includes/config.php');
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h5>Cara Daftar Akun</h5>
+                    <h5>Cara Buat Akun ?</h5>
                     <ol type="1">
                         <li>Klik Tombol Login/Register</a></li>
                         <li>Klik Daftar</a></li>
                         <li>Kemudian Masukkan Nama Lengkap, No.Telpon, Email, dan Password</a></li>
                     </ol>
-                    <h5>Cara Melakukan Pembelian/Penyewaan Produk</h5>
+                    <h5>Cara Melakukan Transaksi Pembelian/Penyewaan Produk ?</h5>
                     <ol type="1">
                         <li>Login Terlebih Dahulu Jika Belum Mempunyai Akun Silahkan Daftar </a></li>
                         <li>Klik Menu Produk</a></li>

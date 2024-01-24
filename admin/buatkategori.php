@@ -108,7 +108,9 @@ if (strlen($_SESSION['alogin']) == 0) {
 												<div class="form-group">
 													<div class="col-sm-8 col-sm-offset-4">
 
-														<button class="btn btn-primary" name="submit" type="submit">Tambah</button>
+														<button class="btn btn-primary" name="submit" type="submit">Create</button>
+														<button class="btn btn-default" type="reset">Cancel</button>
+
 													</div>
 												</div>
 

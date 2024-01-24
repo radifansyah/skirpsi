@@ -31,6 +31,7 @@ if (strlen($_SESSION['login']) == 0) {
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
 
 
+
     <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/favicon-icon/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/favicon-icon/apple-touch-icon-114-precomposed.html">
@@ -44,19 +45,23 @@ if (strlen($_SESSION['login']) == 0) {
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
 <![endif]-->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+
   </head>
 
   <body>
+
+    <!--Header-->
+    <?php include('includes/header.php'); ?>
+    <!-- /Header -->
 
     <!-- Start Switcher -->
     <!-- <?php include('includes/colorswitcher.php'); ?> -->
     <!-- /Switcher -->
 
-    <!--Header-->
-    <?php include('includes/header.php'); ?>
-    <!--Page Header-->
-    <!-- /Header -->
+
 
     <!--Page Header-->
     <section class="page-header profile_page" style="background-image: url(assets/images/b.jpeg);">
@@ -145,7 +150,7 @@ if (strlen($_SESSION['login']) == 0) {
                               </div>
                             <?php } ?>
                             <div style="float: left"><br><br>
-                              <p><b>Pesan:</b> <?php echo htmlentities($result->Pesan); ?> </p>
+                              <p><b>Keterangan:</b> <?php echo htmlentities($result->Pesan); ?> </p>
                             </div>
                             </li>
                         <?php }
@@ -173,6 +178,8 @@ if (strlen($_SESSION['login']) == 0) {
         <!--Slider-JS-->
         <script src="assets/js/slick.min.js"></script>
         <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="https://kit.fontawesome.com/59dcbb9722.js" crossorigin="anonymous"></script>
+
   </body>
 
   </html>

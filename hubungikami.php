@@ -121,7 +121,7 @@ if (isset($_POST['send'])) {
                 <input type="email" name="email" class="form-control white_bg" id="emailaddress" required>
               </div>
               <div class="form-group">
-                <label class="control-label">No handphone <span>*</span></label>
+                <label class="control-label">No Telpon <span>*</span></label>
                 <input type="text" name="contactno" class="form-control white_bg" id="phonenumber" required>
               </div>
               <div class="form-group">

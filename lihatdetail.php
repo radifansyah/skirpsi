@@ -113,12 +113,12 @@ if (isset($_POST['submit'])) {
       <section class="listing-detail">
         <div class="container">
           <div class="listing_detail_head row">
-            <div class="col-md-9">
+            <div class="col-md-6">
               <h3><?php echo htmlentities($result->namaKategori); ?>,<?php echo htmlentities($result->Namaproduk); ?></h3>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-5">
               <div class="price_info">
-                <p style="font-size: 25px;">Rp. <?php echo htmlentities($result->Harga); ?> </p>
+                <p style="font-size: 25px;">Harga Rp. <?php echo htmlentities($result->Harga); ?> </p>
 
               </div>
             </div>
@@ -146,7 +146,7 @@ if (isset($_POST['submit'])) {
                 <div class="listing_detail_wrap">
                   <!-- Nav tabs -->
                   <ul class="nav nav-tabs gray-bg" role="tablist">
-                    <li role="presentation" class="active"><a href="#vehicle-overview " aria-controls="vehicle-overview" role="tab" data-toggle="tab">Deskripsi </a></li>
+                    <li role="presentation" class="active"><a href="#vehicle-overview " aria-controls="vehicle-overview" role="tab" data-toggle="tab">Deskripsi Produk </a></li>
 
                     <!-- <li role="presentation"><a href="#accessories" aria-controls="accessories" role="tab" data-toggle="tab">Jenis</a></li> -->
                     <!-- <li role="presentation"><a href="#accessories" aria-controls="accessories" role="tab" data-toggle="tab">Ukuran</a></li> -->
@@ -190,28 +190,30 @@ if (isset($_POST['submit'])) {
             <!--Side-Bar-->
             <aside class="col-md-4">
 
-              <div class="share_vehicle">
+              <!-- <div class="share_vehicle">
                 <p>Share: <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a> </p>
-              </div>
+              </div> -->
               <div class="sidebar_widget">
                 <div class="widget_heading">
                   <h5 style="font-size: 16px;"><i class="fa fa-envelope" aria-hidden="true"></i>Catat Penyewaan/Pembelian</h5>
                 </div>
-                <form method="post">
+                <!-- <form method="post"> -->
+                <form onsubmit="return validateDate()" method="post">
                   <div class="form-group">
                     <label style="font-size: 12px; color: red;" for="">⚠️Jika Melakukan Pembelian Produk Hanya Memasukkan
                       Tanggal Pembelian, Dan Jika Melakukan Penyewaan Produk Silahkan Memasukkan Tanggal
                       Penyewaan
                       Dan Tanggal Pengembalian</label>
                     <label style="font-size: 12px;" for=""> Tanggal Pembelian/Penyewaan Produk</label>
-                    <input type="date" class="form-control" name="daritanggal" placeholder="" required>
+                    <!-- <input type="date" class="form-control" name="daritanggal" placeholder="" required> -->
+                    <input type="date" class="form-control" name="daritanggal" id="daritanggal" placeholder="" required>
                   </div>
                   <div class="form-group">
                     <label style="font-size: 13px;" for=""> Tanggal Pengembalian Produk</label>
                     <input type="date" class="form-control" name="sampaitanggal" placeholder="">
                   </div>
                   <div class="form-group">
-                    <textarea rows="4" class="form-control" name="pesan" placeholder="Deskripsi(Optional)"></textarea>
+                    <textarea rows="4" class="form-control" name="pesan" placeholder="Catat Pesanan (Opsional)"></textarea>
                   </div>
                   <?php if ($_SESSION['login']) { ?>
                     <div class="form-group">
@@ -292,6 +294,8 @@ if (isset($_POST['submit'])) {
       <!--Forgot-password-Form -->
       <?php include('includes/forgotpassword.php'); ?>
 
+
+
       <script src="assets/js/jquery.min.js"></script>
       <script src="assets/js/bootstrap.min.js"></script>
       <script src="assets/js/interface.js"></script>
@@ -299,6 +303,23 @@ if (isset($_POST['submit'])) {
       <script src="assets/js/bootstrap-slider.min.js"></script>
       <script src="assets/js/slick.min.js"></script>
       <script src="assets/js/owl.carousel.min.js"></script>
+      <script>
+        function validateDate() {
+          var inputDate = new Date(document.getElementById('daritanggal').value);
+          var currentDate = new Date();
+
+          // Set waktu ke awal hari ini
+          currentDate.setHours(0, 0, 0, 0);
+
+          if (inputDate < currentDate) {
+            alert('Pilih tanggal pada hari ini atau setelahnya.');
+            return false; // Formulir tidak akan dikirim
+          } else {
+            // alert('Tanggal valid.');
+            return true; // Formulir akan dikirim
+          }
+        }
+      </script>
 
 </body>
 
