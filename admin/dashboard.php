@@ -106,7 +106,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 														<div class="stat-panel-title ">Semua Kategori</div>
 													</div>
 												</div>
-												<a href="semuaproduk.php" class="block-anchor panel-footer text-center">Lihat Detail &nbsp; <i class="fa fa-arrow-right"></i></a>
+												<a href="semuakategori.php" class="block-anchor panel-footer text-center">Lihat Detail &nbsp; <i class="fa fa-arrow-right"></i></a>
 											</div>
 										</div>
 									</div>
